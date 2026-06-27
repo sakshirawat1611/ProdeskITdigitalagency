@@ -5,132 +5,132 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prodesk IT | Digital Agency</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="header">
+<!-- navbar-->
+<header class="header" id="header">
   <nav class="nav">
 
     <div class="nav__logo">
-      <img src="logo.png" alt="Prodesk IT company logo">
+      <img src="logo.png" alt="Prodesk IT">
     </div>
 
-    <div class="nav__menu">
-    <a href="#home" class="nav__link">Home</a>
-    <a href="#about" class="nav__link">About</a>
-    <a href="#services" class="nav__link">Services</a>
-    <a href="#contact" class="nav__link">Contact</a>
-  </div>
-
-  <div class="nav__theme-toggle">
-  <input type="checkbox" id="theme-toggle">
-
-  <label for="theme-toggle" class="toggle-label">
-
-    <!-- SUN -->
-    <svg viewBox="0 0 24 24">
-      <path d="M12 4V2M12 22v-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41M12 6a6 6 0 100 12 6 6 0 000-12z"/>
-    </svg>
-
-    <!-- MOON -->
-    <svg viewBox="0 0 24 24">
-      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-    </svg>
-
-    <span class="toggle-ball"></span>
-
-    </label>
+    <div class="nav__menu" id="nav-menu">
+      <a href="#home" class="nav__link">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#contact" class="nav__link">Contact</a>
     </div>
 
-</nav>
+    <div class="nav__actions">
 
-<!-- Font Awesome (REQUIRED for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
 
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- hero section -->
 <section class="hero" id="home">
-  <video autoplay muted loop class="hero__video">
+  <video autoplay muted loop playsinline class="hero__video">
     <source src="video.mp4" type="video/mp4">
   </video>
-
   <div class="hero__content container">
-    <h1 class="hero__title">Transforming Ideas into Digital Success</h1>
-
+    <div class="hero__badge">✦ Digital Agency</div>
+    <h1 class="hero__title">
+      Transforming Ideas into<br>
+      <span class="hero__title--accent">Digital Success</span>
+    </h1>
     <p class="hero__description">
-      At Prodesk IT, we craft high-performance websites and data-driven 
+      At Prodesk IT, we craft high-performance websites and data-driven
       marketing strategies that help your business grow faster and smarter.
     </p>
-
     <div class="hero__buttons">
-      <a href="#" class="btn btn--primary">Get Started</a>
+      <a href="#contact" class="btn btn--primary">
+        <i class="fa-solid fa-rocket"></i> Get Started
+      </a>
       <a href="#services" class="btn btn--secondary">View Services</a>
     </div>
   </div>
 </section>
+
+<!-- about section -->
 <section class="section" id="about">
   <div class="container">
+    <span class="section__eyebrow">Who we are</span>
     <h2 class="section__title">About Us</h2>
     <p class="section__subtitle">
-      At Prodesk IT, we specialize in delivering modern digital solutions 
+      At Prodesk IT, we specialize in delivering modern digital solutions
       that help businesses grow, scale, and stand out in the digital world.
     </p>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- service section -->
 <section class="services section" id="services">
   <div class="container">
+    <span class="section__eyebrow">What we do</span>
     <h2 class="section__title">Our Services</h2>
     <p class="section__subtitle">Comprehensive solutions to grow your business</p>
 
     <div class="services__grid">
 
-  <!-- Web Dev -->
-  <div class="service-card service-card--web">
-    <i class="fas fa-globe service-card__icon"></i>
-    <h3 class="service-card__title">Web Development</h3>
-    <p class="service-card__desc">Custom, fast, and responsive websites built with modern frameworks to engage your audience seamlessly across all devices.</p>
-  </div>
+      <div class="service-card service-card--web">
+        <div class="service-card__icon-wrap">
+          <i class="fas fa-globe service-card__icon"></i>
+        </div>
+        <h3 class="service-card__title">Web Development</h3>
+        <p class="service-card__desc">Custom, fast, and responsive websites built with modern frameworks to engage your audience across all devices.</p>
+        <span class="service-card__tag">Learn more →</span>
+      </div>
 
-  <!-- SEO -->
-  <div class="service-card service-card--seo">
-    <i class="fas fa-chart-line service-card__icon"></i>
-    <h3 class="service-card__title">SEO Optimization</h3>
-    <p class="service-card__desc">Data-driven strategies to improve your search engine rankings, drive organic traffic, and increase your brand visibility.</p>
-  </div>
+      <div class="service-card service-card--seo">
+        <div class="service-card__icon-wrap">
+          <i class="fas fa-chart-line service-card__icon"></i>
+        </div>
+        <h3 class="service-card__title">SEO Optimization</h3>
+        <p class="service-card__desc">Data-driven strategies to improve your search engine rankings, drive organic traffic, and increase brand visibility.</p>
+        <span class="service-card__tag">Learn more →</span>
+      </div>
 
-  <!-- Marketing -->
-  <div class="service-card service-card--marketing">
-    <i class="fas fa-bullhorn service-card__icon"></i>
-    <h3 class="service-card__title">Digital Marketing</h3>
-    <p class="service-card__desc">Targeted campaigns across social media and search platforms to connect with your audience and boost conversions.</p>
-  </div>
+      <div class="service-card service-card--marketing">
+        <div class="service-card__icon-wrap">
+          <i class="fas fa-bullhorn service-card__icon"></i>
+        </div>
+        <h3 class="service-card__title">Digital Marketing</h3>
+        <p class="service-card__desc">Targeted campaigns across social media and search platforms to connect with your audience and boost conversions.</p>
+        <span class="service-card__tag">Learn more →</span>
+      </div>
 
     </div>
   </div>
 </section>
 
+<!-- contact section -->
 <section class="section" id="contact">
   <div class="container">
+    <span class="section__eyebrow">Get in touch</span>
     <h2 class="section__title">Contact Us</h2>
     <p class="section__subtitle">
-      Have a project in mind? Let’s work together to build something amazing.
+      Have a project in mind? Let's work together to build something amazing.
     </p>
   </div>
 </section>
 
+<!-- footer -->
 <footer class="footer">
   <div class="footer__container container">
 
@@ -150,9 +150,9 @@
     <div class="footer__social">
       <h4>Follow Us</h4>
       <div class="footer__icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
 
@@ -162,7 +162,7 @@
     <p>© 2026 Prodesk IT. All rights reserved.</p>
   </div>
 </footer>
-<!-- JS -->
+
 <script src="script.js"></script>
 </body>
 </html>
